@@ -14,6 +14,11 @@ public class Counter {
     public Counter() {
     }
 
+    /**
+     * Reads data values from a file and add them to the sum and count.
+     * If the file doesn’t exist then print “File not found: filename” and return.
+     * @param filename is a file that you want to know number of values and total of values.
+     */
     public void readfile(String filename) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))) {
             String lines;
@@ -41,14 +46,16 @@ public class Counter {
     }
 
     /**
-     * To get the number.
+     * To get how many number in the file.
+     * @return the number of values read so far.
      */
     public int getCount() {
         return count;
     }
 
     /**
-     * To get total of number .
+     * To get the total of number in the file.
+     * @return  the total of values read so far.
      */
     public double getTotal() {
         return total;
